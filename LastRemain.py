@@ -8,7 +8,14 @@ class Solution:
         i = 0
         listOfNumber = list(range(n))
         while count > 1:
-            i = (i + m - 1 ) % count
+            # i = (i + m - 1 ) %
+            i = i + m - 1
+            while i >= count :
+                i = i - count
             listOfNumber.remove(listOfNumber[i])
             count -= 1
         return listOfNumber[0]
+
+
+a = Solution()
+print(a.LastRemaining_Solution(5,3))
