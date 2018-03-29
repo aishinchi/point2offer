@@ -9,13 +9,10 @@ class Solution:
         dic = dict()
         for i in range(lens):
             if numbers[i] in dic:
-                dic[numbers[i]] += 1
+                duplication[0] = numbers[i]
+                return True
             else:
                 dic[numbers[i]] = 1
-        for item in dic:
-            if dic[item] > 1:
-                duplication[0] = item
-                return True
         return False
 
 
